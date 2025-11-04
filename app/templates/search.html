@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Search Quran{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <div class="container">
+        <div class="search-header">
+            <h1>Search the Quran</h1>
+            <p>Search through all verses in Arabic and English</p>
+        </div>
+
+        <div class="search-form">
+            <div class="search-input-group">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Enter search term..." class="search-input">
+                <button class="btn btn-primary" id="searchBtn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label>Search in:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="searchLang" value="both" checked>
+                            Both
+                        </label>
+                        <label>
+                            <input type="radio" name="searchLang" value="arabic">
+                            Arabic
+                        </label>
+                        <label>
+                            <input type="radio" name="searchLang" value="english">
+                            English
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <div class="search-placeholder">
+                <i class="fas fa-search"></i>
+                <p>Enter a search term to find verses</p>
+                <div class="search-examples">
+                    <p>Try searching for:</p>
+                    <button class="example-query" data-query="mercy">mercy</button>
+                    <button class="example-query" data-query="paradise">paradise</button>
+                    <button class="example-query" data-query="prayer">prayer</button>
+                    <button class="example-query" data-query="الله">الله</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}
