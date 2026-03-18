@@ -2,7 +2,9 @@
 
 Flask-based Quran web app with reading, search, authentication, bookmarks, and a bundled SQLite Quran database.
 
-## Clean Repo Layout
+Access here: https://shiith-quran-app.vercel.app/
+
+## Repo Layout
 
 - `app/` - Flask package, templates, CSS, JavaScript, favicon
 - `fullquranDb.db` - bundled Quran content database
